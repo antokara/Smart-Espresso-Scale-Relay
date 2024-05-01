@@ -7,7 +7,6 @@ The Relay component of the Smart Espresso Scale, powered by the [Raspberry Pi Pi
 1. [Raspberry Pi Pico W board](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html)
    1. [pinout](https://datasheets.raspberrypi.com/picow/PicoW-A4-Pinout.pdf)
 
-
 ## VS Code
 
 1. install VS Code
@@ -58,16 +57,6 @@ the device should get `smart-espresso-scale-relay.local` as a hostname on the lo
 ### secrets
 
 copy `secrets.h.template` to `secrets.h` and insert values
-
-### bluetooth
-
-1. use O/S GUI to pair the BT device
-1. install minicom terminal utility app
-1. install rfcomm (BT legacy)
-1. `bluetooth devices` to view the mac address OR use the O/S GUI
-1. `sudo rfcomm bind 0 xx:yy:xx:yy:xx:yy` to add BT  device port
-1. `minicom -D /dev/rfcomm0` and type to test
-1. `sudo rfcomm release rfcomm0` to remove BT device port
 
 ## troubleshooting
 
