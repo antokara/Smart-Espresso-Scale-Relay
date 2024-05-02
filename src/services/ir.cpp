@@ -2,7 +2,6 @@
 #include "services/device.h"
 #include "services/pump.h"
 #include "TinyIRReceiver.hpp"
-#include "TinyIRSender.hpp"
 
 /**
  * @author Antonios Karagiannis (antokarag@gmail.com)
@@ -13,9 +12,6 @@
  *
  */
 unsigned long Ir::lastReceivedTime = 0;
-uint8_t Ir::sendAddress = 0x02;
-uint8_t Ir::sendCommand = 0x34;
-uint8_t Ir::sendRepeats = 3;
 
 /**
  * @brief should be called once, from the main setup() function
@@ -66,9 +62,4 @@ void Ir::onReceive(uint8_t address, uint8_t command, bool repeat, bool parityFai
     {
         Pump::toggle();
     }
-}
-
-void Ir::send()
-{
-    sendNEC(IR_SEND_PIN, Ir::sendAddress, Ir::sendCommand, Ir::sendRepeats);
 }

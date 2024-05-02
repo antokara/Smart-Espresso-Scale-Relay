@@ -6,7 +6,7 @@
  * @brief water pump relay control pin
  * D0-D28 which equates to GP0-GP28.
  */
-#define PUMP_RELAY_PIN D16
+#define PUMP_RELAY_PIN D0
 
 /**
  * @brief duration in milliseconds for the pump relay
