@@ -7,6 +7,6 @@
 #define FIRMWARE_VERSION "1.0.0"
 
 // uncomment to enable serial.print debug messages
-#define SERIAL_DEBUG
+// #define SERIAL_DEBUG
 
 #endif // DEVICE
